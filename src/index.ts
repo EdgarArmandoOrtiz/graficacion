@@ -81,10 +81,38 @@ function decrDistFunc() {
 function pza1DerFunc() {
   let af = 10;
  	
-	Rota3D.initRotate( obj.w[139], obj.w[140], af*Math.PI/180);	
+	//Rota3D.initRotate( obj.w[139], obj.w[140], af*Math.PI/180);	
 	
   for (let i = 9; i <= 16; i++){
-    obj.w[i] = Rota3D.rotate(obj.w[i]);
+    obj.w[i].y=obj.w[i].y+1;
+	}
+  for (let i = 1; i <= 8; i++){
+    obj.w[i].x=obj.w[i].x+1;
+	}
+  for (let i = 17; i <= 24; i++){
+    obj.w[i].z=obj.w[i].z+1;
+	}
+  for (let i = 25; i <= 32; i++){
+    obj.w[i].z=obj.w[i].z+1;
+    obj.w[i].y=obj.w[i].y+1;
+	}
+  for (let i = 33; i <= 40; i++){
+    obj.w[i].x=obj.w[i].x-1;
+    obj.w[i].y=obj.w[i].y-1;
+	}
+  for (let i = 41; i <= 48; i++){
+    obj.w[i].x=obj.w[i].x-1;
+    obj.w[i].y=obj.w[i].y+1;
+	}
+  for (let i = 49; i <= 56; i++){
+    obj.w[i].z=obj.w[i].z+1;
+    obj.w[i].x=obj.w[i].x-1;
+    obj.w[i].y=obj.w[i].y-1;
+	}
+  for (let i = 57; i <= 64; i++){
+    obj.w[i].z=obj.w[i].z+1;
+    obj.w[i].x=obj.w[i].x-1;
+    obj.w[i].y=obj.w[i].y+1;
 	}
 	cv.setObj(obj);
   cv.paint();	
@@ -93,10 +121,38 @@ function pza1DerFunc() {
 function pza1IzqFunc() {
   let af = -10;
  	
-	Rota3D.initRotate( obj.w[139], obj.w[140], af*Math.PI/180);	
+	//Rota3D.initRotate( obj.w[139], obj.w[140], af*Math.PI/180);	
 	
   for (let i = 9; i <= 16; i++){
-    obj.w[i] = Rota3D.rotate(obj.w[i]);
+    obj.w[i].y=obj.w[i].y-1;
+	}
+  for (let i = 1; i <= 8; i++){
+    obj.w[i].x=obj.w[i].x-1;
+	}
+  for (let i = 17; i <= 24; i++){
+    obj.w[i].z=obj.w[i].z-1;
+	}
+  for (let i = 25; i <= 32; i++){
+    obj.w[i].z=obj.w[i].z-1;
+    obj.w[i].y=obj.w[i].y-1;
+	}
+  for (let i = 33; i <= 40; i++){
+    obj.w[i].x=obj.w[i].x+1;
+    obj.w[i].y=obj.w[i].y+1;
+	}
+  for (let i = 41; i <= 48; i++){
+    obj.w[i].x=obj.w[i].x+1;
+    obj.w[i].y=obj.w[i].y-1;
+	}
+  for (let i = 49; i <= 56; i++){
+    obj.w[i].z=obj.w[i].z-1;
+    obj.w[i].x=obj.w[i].x+1;
+    obj.w[i].y=obj.w[i].y+1;
+	}
+  for (let i = 57; i <= 64; i++){
+    obj.w[i].z=obj.w[i].z-1;
+    obj.w[i].x=obj.w[i].x+1;
+    obj.w[i].y=obj.w[i].y-1;
 	}
 	cv.setObj(obj);
   cv.paint();	
@@ -142,8 +198,8 @@ document.getElementById('decrDist').addEventListener('click', decrDistFunc, fals
 
 
 //movimiento de piezas
-document.getElementById('pza1Izq').addEventListener('click', pza1IzqFunc, false);
-document.getElementById('pza1Der').addEventListener('click', pza1DerFunc, false);
+document.getElementById('pza1Izq').addEventListener('click', pza1DerFunc, false);
+document.getElementById('pza1Der').addEventListener('click', pza1IzqFunc, false);
 document.getElementById('pza12Izq').addEventListener('click', pza12IzqFunc, false);
 document.getElementById('pza12Der').addEventListener('click', pza12DerFunc, false);
 
