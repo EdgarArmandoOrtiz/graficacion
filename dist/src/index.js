@@ -173,8 +173,6 @@ document.getElementById('decrDist').addEventListener('click', decrDistFunc, fals
 //movimiento de piezas
 document.getElementById('pza1Izq').addEventListener('click', pza1DerFunc, false);
 document.getElementById('pza1Der').addEventListener('click', pza1IzqFunc, false);
-document.getElementById('pza12Izq').addEventListener('click', pza12IzqFunc, false);
-document.getElementById('pza12Der').addEventListener('click', pza12DerFunc, false);
 var Pix, Piy;
 var Pfx, Pfy;
 var theta = 0.3, phi = 1.3, SensibilidadX = 0.02, SensibilidadY = 0.02;

@@ -200,8 +200,6 @@ document.getElementById('decrDist').addEventListener('click', decrDistFunc, fals
 //movimiento de piezas
 document.getElementById('pza1Izq').addEventListener('click', pza1DerFunc, false);
 document.getElementById('pza1Der').addEventListener('click', pza1IzqFunc, false);
-document.getElementById('pza12Izq').addEventListener('click', pza12IzqFunc, false);
-document.getElementById('pza12Der').addEventListener('click', pza12DerFunc, false);
 
 let Pix: number, Piy: number;
 let Pfx: number, Pfy: number;
